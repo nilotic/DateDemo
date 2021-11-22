@@ -336,6 +336,30 @@ struct ContentView: View {
                     .font(.system(size: 12, weight: .semibold))
                     .foregroundColor(.gray)
             }
+            
+            
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text(DateFormat.format14.rawValue)
+                    .font(.system(size: 15, weight: .bold))
+                
+                Text((data.date.string(dateFormat: .format14) ?? "") + "      Formatted")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.gray)
+                
+                Text((data.date.localizedString(dateFormat: .format14, locale: data.koreanLocale) ?? "") + "      Korean")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.gray)
+                
+                Text((data.date.localizedString(dateFormat: .format14, locale: data.englishLocale) ?? "")  + "      English")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.gray)
+                
+                Text((data.date.localizedString(dateFormat: .format14, locale: data.spanishLocale) ?? "") + "      Spanish")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.gray)
+            }
         }
     }
 }
