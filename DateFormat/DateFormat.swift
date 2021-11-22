@@ -9,12 +9,12 @@ import Foundation
 
 enum DateFormat: String {
     case format1 = "yyyyMMddHHmm"
-    case format2 = "yyyy.MM.dd"
-    case format3 = "yyyy-MM-dd"
-    case format4 = "yyyy/MM/dd HH:mm:ss"
-    case format5 = "yyyy. MM. dd"
+    case format2 = "yyyy.MM.dd E"
+    case format3 = "yyyy-MM-dd EEE"
+    case format4 = "yyyy/MM/dd E HH:mm:ss"
+    case format5 = "yyyy. MM. dd. EEEE"
     case format6 = "yyyy년 MM월 dd일"
-    case format7 = "yyyyMMdd HH:mm"
+    case format7 = "yyyyMMdd E HH:mm"
     case format8 = "MM.dd"
     case format9 = "yyyyMMdd"
     case format10 = "yyyy/MM/dd"
