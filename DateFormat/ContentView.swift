@@ -362,6 +362,29 @@ struct ContentView: View {
             }
         }
     }
+    
+    private var currency: some View {
+        let amount: Decimal = 100000000
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle    = .currency
+        
+        
+        switch LocaleManager.locale?.identifier ?? "" {
+        case "ko":
+            numberFormatter.positiveFormat = "#,##0원"
+            numberFormatter.negativeFormat = "-#,##0원"
+            
+        default:
+            numberFormatter.locale = Locale(identifier: "ko_KR")
+        }
+        
+        let formattedAmount = numberFormatter.string(for: amount) ?? ""
+        
+        return VStack {
+            Text(formattedAmount)
+        }
+    }
 }
 
 #if DEBUG

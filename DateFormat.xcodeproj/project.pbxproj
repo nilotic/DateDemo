@@ -16,6 +16,8 @@
 		B711DDA627193C7F003BB848 /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711DDA527193C7F003BB848 /* ContentData.swift */; };
 		B711DDA827193D3D003BB848 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711DDA727193D3D003BB848 /* Logger.swift */; };
 		B711DDAA27193D5C003BB848 /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B711DDA927193D5C003BB848 /* LogType.swift */; };
+		B7BB6DD727A0D13100ACC32C /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB6DD427A0D13100ACC32C /* LocaleManager.swift */; };
+		B7BB6DD827A0D13100ACC32C /* Lanaguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB6DD627A0D13100ACC32C /* Lanaguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		B711DDA527193C7F003BB848 /* ContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
 		B711DDA727193D3D003BB848 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B711DDA927193D5C003BB848 /* LogType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
+		B7BB6DD427A0D13100ACC32C /* LocaleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
+		B7BB6DD627A0D13100ACC32C /* Lanaguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lanaguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				B711DDA327193C47003BB848 /* DateFormat.swift */,
 				B711DDA727193D3D003BB848 /* Logger.swift */,
 				B711DDA927193D5C003BB848 /* LogType.swift */,
+				B7BB6DD327A0D13100ACC32C /* Locale */,
 				B711DD9727193BA1003BB848 /* Assets.xcassets */,
 				B711DD9927193BA1003BB848 /* Preview Content */,
 			);
@@ -80,6 +85,23 @@
 				B711DD9A27193BA1003BB848 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B7BB6DD327A0D13100ACC32C /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB6DD427A0D13100ACC32C /* LocaleManager.swift */,
+				B7BB6DD527A0D13100ACC32C /* Model */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		B7BB6DD527A0D13100ACC32C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB6DD627A0D13100ACC32C /* Lanaguage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B711DD9627193BA0003BB848 /* ContentView.swift in Sources */,
+				B7BB6DD727A0D13100ACC32C /* LocaleManager.swift in Sources */,
 				B711DDAA27193D5C003BB848 /* LogType.swift in Sources */,
 				B711DDA827193D3D003BB848 /* Logger.swift in Sources */,
 				B711DDA627193C7F003BB848 /* ContentData.swift in Sources */,
+				B7BB6DD827A0D13100ACC32C /* Lanaguage.swift in Sources */,
 				B711DDA227193BF4003BB848 /* DateExtension.swift in Sources */,
 				B711DDA427193C47003BB848 /* DateFormat.swift in Sources */,
 				B711DD9427193BA0003BB848 /* DateFormatApp.swift in Sources */,
