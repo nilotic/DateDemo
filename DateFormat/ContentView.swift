@@ -20,6 +20,8 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
+                currency
+                Divider()
                 formattedStrings
                 Divider()
                 formattedStrings2
@@ -367,8 +369,7 @@ struct ContentView: View {
         let amount: Decimal = 100000000
         
         let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle    = .currency
-        
+        numberFormatter.numberStyle = .currency
         
         switch LocaleManager.locale?.identifier ?? "" {
         case "ko":
@@ -379,10 +380,14 @@ struct ContentView: View {
             numberFormatter.locale = Locale(identifier: "ko_KR")
         }
         
-        let formattedAmount = numberFormatter.string(for: amount) ?? ""
-        
+        let numberFormatter2 = NumberFormatter()
+        numberFormatter2.locale = Locale(identifier: "ko_KR")
+        numberFormatter2.numberStyle = .spellOut
+   
         return VStack {
-            Text(formattedAmount)
+            Text(numberFormatter.string(for: amount) ?? "")
+            
+            Text(numberFormatter2.string(for: amount) ?? "")
         }
     }
 }
